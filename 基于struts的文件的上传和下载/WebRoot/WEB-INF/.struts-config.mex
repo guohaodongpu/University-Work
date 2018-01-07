@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/fileUpDownLoad.do" location="50,150" dimension="364,84" />
+  <StrutsActivity path="/login.do" location="650,50" dimension="244,84" />
+  <StrutsActivity path="/uploadfile.jsp" location="350,350" dimension="130,48" />
+  <StrutsActivity path="/login.jsp" location="950,50" dimension="100,48" />
+  <StrutsActivity path="/index.jsp" location="950,150" dimension="100,48" />
+  <StrutsActivity path="/result.jsp" location="950,350" dimension="106,48" />
+  <StrutsActivity path="/updownload/uploadfile.jsp" location="650,250" dimension="196,48" />
+  <StrutsActivity path="/updownload/downloadfile.jsp" location="950,250" dimension="208,48" />
+  <StrutsActivity path="/updownload/result.jsp" location="50,350" dimension="172,48" />
+  <StrutsActivity path="/downloadfile.jsp" location="650,350" dimension="142,48" />
+  <StrutsActivity path="/fileinfo.jsp" location="50,450" dimension="96,52" />
+  <StrutsTransition id="/fileUpDownLoad.do,success,/uploadfile.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="369,234" />
+      <AbsolutePoint location="369,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="894,74" />
+      <AbsolutePoint location="950,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="894,113" />
+      <AbsolutePoint location="1000,113" />
+      <AbsolutePoint location="1000,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpDownLoad.do,list,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="414,174" />
+      <AbsolutePoint location="950,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpDownLoad.do,info,/fileinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="237,234" />
+      <AbsolutePoint location="237,476" />
+      <AbsolutePoint location="146,476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpDownLoad.do,input,/uploadfile.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="399,234" />
+      <AbsolutePoint location="399,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpDownLoad.do,show,/result.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="267,234" />
+      <AbsolutePoint location="267,313" />
+      <AbsolutePoint location="1003,313" />
+      <AbsolutePoint location="1003,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fileUpDownLoad.do,logout,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="232,150" />
+      <AbsolutePoint location="232,-25" />
+      <AbsolutePoint location="1000,-25" />
+      <AbsolutePoint location="1000,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

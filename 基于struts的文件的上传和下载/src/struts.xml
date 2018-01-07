@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="gbk" />
+	<constant name="struts.multipart.maxSize" value="167772160000"/>
+	<package name="file" namespace="/" extends="struts-default">
+	    <action name="login" class="action.LoginAction">
+			<result name="success" type="redirect">query.action</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		<action name="upload" class="action.UploadAction" method="upload">
+			<result name="input">/upload.jsp</result>
+			<result name="success" type="redirect">query.action</result>
+			<interceptor-ref name="fileUpload">
+<!--大家可以设置成自己的配置，想文件类型和大小等限制			-->
+<!--				<param name="maximumSize">2097152</param>单位是字节	2M	（2097152B）		-->
+<!--				<param name="allowedTypes">image/bmp,image/x-png,image/png,image/gif,image/jpeg,image/jpg,image/pjpeg</param>-->
+<!--				-->
+<!--					容许文件类型为doc,ppt,xls,pdf,txt,java-->
+<!--				-->
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+        <action name="query" class="action.UploadAction" method="query">
+			<result name="query">/index.jsp</result>
+		</action>
+		 <action name="delete" class="action.UploadAction" method="delete">
+			<result name="success" type="redirect">query.action</result>
+		</action>
+		<action name="download" class="action.DownloadAction">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

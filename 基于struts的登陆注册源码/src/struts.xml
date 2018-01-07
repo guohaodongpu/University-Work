@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <package name="default" extends="struts-default" >
+  <!-- 使用HTML时的action -->
+	<action name="login"  class="org.action.LoginAction" method="login">
+		<result name="login_success">/Login_success.jsp</result>
+		<result name="login_error">/login_error.jsp</result>
+	</action> 
+	<action name="regist"  class="org.action.LoginAction" method="regist">
+		<result name="regist_success">/regist_success.jsp</result>
+		<result name="regist_error">/regist_error.jsp</result>
+	</action> 
+	<!-- 使用struts标签时的action -->
+	<!-- <action name="ind"  class="org.action.LoginAction">
+		<result name="login_success">/Login_success.jsp</result>
+		<result name="login_error">/login_error.jsp</result>
+		<result name="regist_success">/regist_success.jsp</result>
+		<result name="regist_error">/regist_error.jsp</result>
+	</action>  -->
+  </package>
+</struts>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindStu</servlet-name>
+    <servlet-class>FindStu</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindTea</servlet-name>
+    <servlet-class>FindTea</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeletStu</servlet-name>
+    <servlet-class>DeletStu</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeletTea</servlet-name>
+    <servlet-class>DeletTea</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateStu</servlet-name>
+    <servlet-class>UpdateStu</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateTea</servlet-name>
+    <servlet-class>UpdateTea</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>FindStu</servlet-name>
+    <url-pattern>/servlet/FindStu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindTea</servlet-name>
+    <url-pattern>/servlet/FindTea</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletStu</servlet-name>
+    <url-pattern>/servlet/DeletStu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletTea</servlet-name>
+    <url-pattern>/servlet/DeletTea</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateStu</servlet-name>
+    <url-pattern>/servlet/UpdateStu</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTea</servlet-name>
+    <url-pattern>/servlet/UpdateTea</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
